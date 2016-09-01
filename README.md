@@ -4,6 +4,17 @@ A simple chat application written using the MEAN stack.
 
 This is mostly just a way for me to learn the stack.
 
+## Running this demo
+
+You need mongodb installed locally, and start it preferably using startdb.sh in a separate terminal.
+
+I like to start the server by running 'nodemon server.js', but you can just use 'node server.js' too, if you'd like.
+
+Recommended global dependencies
+  mongodb (homebrew)
+  nodemon (npm install -g)
+
+
 ## Roadmap
 
 To begin with, I'm going to follow the tutorial on https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angula and https://scotch.io/tutorials/node-and-angular-to-do-app-application-organization-and-structurer to create a todo app with the mean stack.

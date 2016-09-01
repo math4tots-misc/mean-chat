@@ -1,0 +1,14 @@
+{
+  "bitwise": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "freeze": true,
+  "immed": true,
+  "newcap": false,
+  "noarg": true,
+  "nonew": true,
+  "undef": true,
+  "esversion": 6,
+  "node": true
+}
