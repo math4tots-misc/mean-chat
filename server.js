@@ -42,8 +42,18 @@ app.get('/api/v0/todos', (req, res) => {
 
 app.post('/api/v0/todos', (req, res) => {
   asyncRoute(res, function*() {
-    yield Todo.create({text: req.body.text, done: false});
-    res.json(yield Todo.find());
+    if (!req.body || req.get('Content-Type') !== 'application/json' ||
+        !req.body.text) {
+      console.error("req.body ->");
+      console.error(req.body);
+      res.status(400).send(
+          "text must not be empty " +
+          "(maybe make sure 'Content-Type: application/json' " +
+          "is set in the header)");
+    } else {
+      yield Todo.create({text: req.body.text, done: false});
+      res.json(yield Todo.find());
+    }
   });
 });
 
