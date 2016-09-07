@@ -3,7 +3,7 @@
   "version"      : "0.0.0",
   "description"  : "Simple chat application.",
   "main"         : "server.js",
-  "author"       : "Scotch",
+  "author"       : "math4tots",
   "dependencies" : {
     "body-parser"    : "^1.4.3",
     "express"        : "^4.13.4",

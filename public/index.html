@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="meanChat">
+<head>
+  <title>Mean chat</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+  <script src="core.js"></script>
+</head>
+
+<body ng-controller="mainController">
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>
+        I'm a Todo-aholic
+        <span class="label label-info">{{ todos.length }}</span>
+      </h1>
+    </div>
+
+    <!-- todo list -->
+    <div id="todo-list" class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+        <div class="checkbox" ng-repeat="todo in todos">
+          <label>
+            <input type="checkbox" ng-click="deleteTodo(todo._id)">
+            {{ todo.text }}
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- form to create todos -->
+    <div id="todo-form" class="row">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+        <form>
+          <div class="form-group">
+            <input type="text"
+                   class="form-control input-lg text-center"
+                   placeholder="placeholder" ng-model="formData.text">
+          </div>
+          <button type="submit"
+                  class="btn btn-primary btn-lg"
+                  ng-click="createTodo()">
+            Add
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
