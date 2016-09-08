@@ -5,8 +5,7 @@ const mongoose = require('mongoose');  // for mongodb
 const morgan = require('morgan');  // log requests to console
 const bodyParser = require('body-parser');  // parse HTML POST
 const methodOverride = require('method-override');  // fake DELETE and PUT
-
-const {asyncf} = require('./app/asyncutils.js');
+const asyncf = require('asyncf');
 
 
 // config
